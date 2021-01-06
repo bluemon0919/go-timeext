@@ -22,30 +22,30 @@ var errLenMismatch = errors.New("Length mismatch")
 // timeパッケージが処理できない30時間制の時間表現を解析し、時間値を返します。
 // 30時間制は24:00:00-29:59:59の時間表現を指します。
 // layoutは、基準時間をどのように定義するかを示すことでフォーマットを定義します。
-func Parse(layout, value string) (time.Time, error) {
+func Parse(layout, value string) (TimeExt, error) {
 	t, err := time.Parse(layout, value)
 	if err != nil {
 		t, err = parseIn30HourSystem(layout, value, time.UTC)
 		if err != nil {
-			return t, err
+			return TimeExt(t), err
 		}
-		return t, nil
+		return TimeExt(t), nil
 	}
-	return t, nil
+	return TimeExt(t), nil
 }
 
 // ParseInLocation はtimeパッケージのParseInLocationの拡張ラッパーです。
 // Parseは時刻をUTCとして解釈するのに対し、ParseInLocationは指定された場所と同様に時間を解釈します。
-func ParseInLocation(layout, value string, loc *time.Location) (time.Time, error) {
+func ParseInLocation(layout, value string, loc *time.Location) (TimeExt, error) {
 	t, err := time.ParseInLocation(layout, value, loc)
 	if err != nil {
 		t, err = parseIn30HourSystem(layout, value, loc)
 		if err != nil {
-			return t, err
+			return TimeExt(t), err
 		}
-		return t, nil
+		return TimeExt(t), nil
 	}
-	return t, nil
+	return TimeExt(t), nil
 }
 
 // IsExt は30時間制で拡張処理するかどうかを返します。

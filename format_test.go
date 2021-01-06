@@ -23,7 +23,7 @@ func TestParse13(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -40,7 +40,7 @@ func TestParse24(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -57,7 +57,7 @@ func TestParse241023(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -74,7 +74,7 @@ func TestParse25(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -91,7 +91,7 @@ func TestParse251023(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -108,7 +108,7 @@ func TestParse295959(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -161,7 +161,7 @@ func TestParse13InUTC(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -180,7 +180,7 @@ func TestParse24InUTC(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -199,7 +199,7 @@ func TestParse241023InUTC(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -218,7 +218,7 @@ func TestParse25InUTC(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -237,7 +237,7 @@ func TestParse251023InUTC(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
@@ -256,7 +256,7 @@ func TestParse295959InUTC(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if expect != actual {
+	if expect != time.Time(actual) {
 		log.Fatal(actual)
 	}
 }
